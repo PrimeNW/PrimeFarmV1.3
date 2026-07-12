@@ -1,0 +1,70 @@
+prefix: "&2[PrimeFarm] &r"
+
+players-only: "&cThis command can only be used by players."
+no-permission: "&cYou don't have permission to use this command."
+unknown-command: "&cUnknown command. Type /pf help."
+
+storage-empty: "&cStorage is empty."
+sold-all: "&aSold entire storage for: &f%amount% %currency%"
+sold-one: "&aSold %material% for: &f%amount% %currency%"
+
+withdraw-success: "&aWithdrew %material% to your inventory: &f%amount%"
+withdraw-partial: "&eOnly room for %amount% %material% in your inventory, the rest stayed in storage."
+withdraw-full: "&cYour inventory has no free space."
+withdraw-empty: "&cYou have none of that material in storage."
+
+page-locked-buy: "&cThis page is locked. Unlock cost: &f%price% %currency%"
+page-locked-permission: "&cYou don't have the required rank/permission for this page."
+page-purchase-success: "&aPage %page% unlocked! &f-%price% %currency%"
+page-not-enough-money: "&cYou don't have enough money. Required: &f%price% %currency%"
+page-already-unlocked: "&eThis page is already unlocked."
+
+lang-set: "&aLanguage set to: &f%lang%"
+lang-usage: "&cUsage: /pf lang <tr|en|br>"
+lang-unknown: "&cInvalid language. Options: tr, en, br"
+
+reload-success: "&aPrimeFarm configuration reloaded."
+
+help-header: "&a===== PrimeFarm ====="
+help-storage: "&e/pf storage &7- Open storage"
+help-settings: "&e/pf settings &7- Choose which farms go to storage"
+help-lang: "&e/pf lang <tr|en|br> &7- Set language"
+help-reload: "&e/pf reload &7- Reload config (admin)"
+
+settings-title: "PrimeFarm Settings"
+settings-enabled:
+  - "&aENABLED - This farm goes to storage"
+  - "&7Click to disable"
+settings-disabled:
+  - "&cDISABLED - This farm does not go to storage"
+  - "&7Click to enable"
+
+gui-title: "PrimeFarm Storage"
+gui-page-locked-name: "&c&lLOCKED"
+gui-page-locked-lore-buy:
+  - "&7Unlock this page for:"
+  - "&f%price% %currency%"
+  - ""
+  - "&eClick to purchase"
+gui-page-locked-lore-permission:
+  - "&7This page is rank-exclusive."
+  - "&7Required permission: &f%permission%"
+gui-sell-all-name: "&a&lSELL ALL"
+gui-sell-all-lore:
+  - "&7Sells everything on this page."
+gui-withdraw-all-name: "&e&lWITHDRAW ALL"
+gui-withdraw-all-lore:
+  - "&7Withdraws everything on this page to your inventory."
+  - "&7Whatever doesn't fit stays in storage."
+withdraw-page-success: "&aAll items withdrawn to your inventory."
+withdraw-page-partial: "&eWithdrew as much as fit, the rest stayed in storage."
+gui-material-lore:
+  - "&7Amount: &f%amount%"
+  - "&7Unit price: &f%price%"
+  - "&7Total value: &a%total%"
+  - ""
+  - "&eLeft click: &7Sell"
+  - "&eShift + Left click: &7Withdraw to inventory"
+gui-nav-prev: "&f<< Previous Page"
+gui-nav-next: "&fNext Page >>"
+gui-page-indicator: "&fPage %page%/%max%"

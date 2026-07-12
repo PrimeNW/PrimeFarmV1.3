@@ -1,0 +1,30 @@
+name: PrimeFarm
+main: com.primenw.primefarm.PrimeFarm
+version: 2.0.0
+author: PrimeNW
+description: Plot sistemine entegre, coklu sayfali otomatik farm depolama ve satis sistemi.
+softdepend: [Vault, PlotSquared]
+api-version: 1.8
+
+commands:
+  primefarm:
+    description: PrimeFarm ana komutu
+    aliases: [pf, farm]
+    usage: /pf help
+
+permissions:
+  primefarm.use:
+    description: Oyuncularin PrimeFarm komutlarini kullanmasina izin verir
+    default: true
+  primefarm.admin:
+    description: Reload, tum sayfalara erisim vb. yonetici yetkisi
+    default: op
+  primefarm.page3:
+    description: Depo sayfa 3'e erisim (VIP / VIP+ / VIP++)
+    default: false
+  primefarm.page4:
+    description: Depo sayfa 4'e erisim (Astral / Prime)
+    default: false
+  primefarm.page5:
+    description: Depo sayfa 5'e erisim (Prime)
+    default: false

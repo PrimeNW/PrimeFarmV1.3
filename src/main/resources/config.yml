@@ -1,0 +1,46 @@
+# PrimeFarm Ayarlari
+
+default-language: tr   # tr, en, br
+
+# Otomatik toplanacak (arsa icinde dusen itemi yakalayacak) materyaller.
+tracked-materials:
+  - CACTUS
+  - SUGAR_CANE
+
+# /pf settings menusunde oyuncunun ac/kapa yapabilecegi materyaller.
+# Genelde tracked-materials ile ayni listeyi kullanmak mantiklidir.
+toggleable-materials:
+  - CACTUS
+  - SUGAR_CANE
+
+# Depoda tutulan her materyal icin birim satis fiyati.
+prices:
+  CACTUS: 2.0
+  SUGAR_CANE: 1.5
+
+# Dahili ekonomi kullanilirken (Vault yoksa) para biriminin adi.
+currency-name: "FarmCoin"
+
+# ---- 5 sayfali depo sistemi ----
+
+# Sayfa 1 ve 2: oyun ici para ile satin alinarak acilir.
+page-prices:
+  page1: 500.0
+  page2: 1500.0
+
+# Sayfa 3, 4, 5: belirtilen izne sahip oyuncular acabilir.
+# Bu izinleri sunucunuzdaki permission eklentisi (LuckPerms vb.) uzerinden
+# ilgili rutbelere atamaniz gerekir:
+#   page3 -> primefarm.page3   (VIP, VIP+, VIP++)
+#   page4 -> primefarm.page4   (Astral, Prime)
+#   page5 -> primefarm.page5   (Prime)
+page-permissions:
+  page3: "primefarm.page3"
+  page4: "primefarm.page4"
+  page5: "primefarm.page5"
+
+# Hangi materyal hangi sayfada gorunecek. Ileride yeni materyal
+# (PUMPKIN, MELON_BLOCK vb.) eklendikce buraya dagitabilirsiniz.
+# Materyaller artik belirli bir sayfaya sabitlenmez: hepsi ortak, sirali bir
+# depoda tutulur. Sayfa 1'in 45 slotu dolunca otomatik olarak sayfa 2'ye tasar,
+# vs. Hangi materyalin gorunecegi tracked-materials sirasina gore belirlenir.

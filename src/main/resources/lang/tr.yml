@@ -1,0 +1,70 @@
+prefix: "&2[PrimeFarm] &r"
+
+players-only: "&cBu komut sadece oyuncular tarafindan kullanilabilir."
+no-permission: "&cBu komutu kullanma yetkin yok."
+unknown-command: "&cBilinmeyen komut. /pf help yaz."
+
+storage-empty: "&cDepo bos."
+sold-all: "&aTum depo satildi: &f%amount% %currency%"
+sold-one: "&a%material% satildi: &f%amount% %currency%"
+
+withdraw-success: "&a%material% envanterine alindi: &f%amount% adet"
+withdraw-partial: "&e%material% icin envanterinde sadece %amount% adetlik yer vardi, geri kalani depoda kaldi."
+withdraw-full: "&cEnvanterinde hic yer yok."
+withdraw-empty: "&cDepoda bu materyalden yok."
+
+page-locked-buy: "&cBu sayfa kilitli. Acmak icin: &f%price% %currency%"
+page-locked-permission: "&cBu sayfayi acmak icin yeterli rutbe/izne sahip degilsin."
+page-purchase-success: "&aSayfa %page% acildi! &f-%price% %currency%"
+page-not-enough-money: "&cYeterli paran yok. Gereken: &f%price% %currency%"
+page-already-unlocked: "&eBu sayfa zaten acik."
+
+lang-set: "&aDil ayarlandi: &f%lang%"
+lang-usage: "&cKullanim: /pf lang <tr|en|br>"
+lang-unknown: "&cGecersiz dil. Secenekler: tr, en, br"
+
+reload-success: "&aPrimeFarm ayarlari yeniden yuklendi."
+
+help-header: "&a===== PrimeFarm ====="
+help-storage: "&e/pf storage &7- Depoyu ac"
+help-settings: "&e/pf settings &7- Hangi farmlarin depoya gidecegini ayarla"
+help-lang: "&e/pf lang <tr|en|br> &7- Dil sec"
+help-reload: "&e/pf reload &7- Ayarlari yeniden yukle (admin)"
+
+settings-title: "PrimeFarm Ayarlar"
+settings-enabled:
+  - "&aAKTIF - Bu farm depoya gidiyor"
+  - "&7Kapatmak icin tikla"
+settings-disabled:
+  - "&cKAPALI - Bu farm depoya gitmiyor"
+  - "&7Acmak icin tikla"
+
+gui-title: "PrimeFarm Depo"
+gui-page-locked-name: "&c&lKILITLI"
+gui-page-locked-lore-buy:
+  - "&7Bu sayfayi acmak icin:"
+  - "&f%price% %currency%"
+  - ""
+  - "&eSatin almak icin tikla"
+gui-page-locked-lore-permission:
+  - "&7Bu sayfa belirli rutbelere ozeldir."
+  - "&7Gerekli izin: &f%permission%"
+gui-sell-all-name: "&a&lTUMUNU SAT"
+gui-sell-all-lore:
+  - "&7Bu sayfadaki tum urunleri satar."
+gui-withdraw-all-name: "&e&lHEPSINI AL"
+gui-withdraw-all-lore:
+  - "&7Bu sayfadaki tum urunleri envanterine cekar."
+  - "&7Envanterinde yer yoksa kalani depoda kalir."
+withdraw-page-success: "&aTum urunler envanterine alindi."
+withdraw-page-partial: "&eEnvanterinde yer kaldiginca alindi, kalani depoda."
+gui-material-lore:
+  - "&7Miktar: &f%amount%"
+  - "&7Birim fiyat: &f%price%"
+  - "&7Toplam deger: &a%total%"
+  - ""
+  - "&eSol tik: &7Sat"
+  - "&eShift + Sol tik: &7Envantere al"
+gui-nav-prev: "&f<< Onceki Sayfa"
+gui-nav-next: "&fSonraki Sayfa >>"
+gui-page-indicator: "&fSayfa %page%/%max%"

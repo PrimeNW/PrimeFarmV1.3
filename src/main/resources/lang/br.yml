@@ -1,0 +1,70 @@
+prefix: "&2[PrimeFarm] &r"
+
+players-only: "&cEste comando so pode ser usado por jogadores."
+no-permission: "&cVoce nao tem permissao para usar este comando."
+unknown-command: "&cComando desconhecido. Digite /pf help."
+
+storage-empty: "&cO deposito esta vazio."
+sold-all: "&aTodo o deposito foi vendido por: &f%amount% %currency%"
+sold-one: "&a%material% vendido por: &f%amount% %currency%"
+
+withdraw-success: "&a%material% retirado para seu inventario: &f%amount%"
+withdraw-partial: "&eSo havia espaco para %amount% de %material% no seu inventario, o resto ficou no deposito."
+withdraw-full: "&cSeu inventario nao tem espaco livre."
+withdraw-empty: "&cVoce nao tem esse material no deposito."
+
+page-locked-buy: "&cEsta pagina esta bloqueada. Custo para desbloquear: &f%price% %currency%"
+page-locked-permission: "&cVoce nao tem o rank/permissao necessaria para esta pagina."
+page-purchase-success: "&aPagina %page% desbloqueada! &f-%price% %currency%"
+page-not-enough-money: "&cVoce nao tem dinheiro suficiente. Necessario: &f%price% %currency%"
+page-already-unlocked: "&eEsta pagina ja esta desbloqueada."
+
+lang-set: "&aIdioma definido para: &f%lang%"
+lang-usage: "&cUso: /pf lang <tr|en|br>"
+lang-unknown: "&cIdioma invalido. Opcoes: tr, en, br"
+
+reload-success: "&aConfiguracoes do PrimeFarm recarregadas."
+
+help-header: "&a===== PrimeFarm ====="
+help-storage: "&e/pf storage &7- Abrir deposito"
+help-settings: "&e/pf settings &7- Escolher quais farms vao para o deposito"
+help-lang: "&e/pf lang <tr|en|br> &7- Escolher idioma"
+help-reload: "&e/pf reload &7- Recarregar configuracoes (admin)"
+
+settings-title: "Configuracoes PrimeFarm"
+settings-enabled:
+  - "&aATIVO - Esta farm vai para o deposito"
+  - "&7Clique para desativar"
+settings-disabled:
+  - "&cDESATIVADO - Esta farm nao vai para o deposito"
+  - "&7Clique para ativar"
+
+gui-title: "Deposito PrimeFarm"
+gui-page-locked-name: "&c&lBLOQUEADO"
+gui-page-locked-lore-buy:
+  - "&7Desbloqueie esta pagina por:"
+  - "&f%price% %currency%"
+  - ""
+  - "&eClique para comprar"
+gui-page-locked-lore-permission:
+  - "&7Esta pagina e exclusiva para certos ranks."
+  - "&7Permissao necessaria: &f%permission%"
+gui-sell-all-name: "&a&lVENDER TUDO"
+gui-sell-all-lore:
+  - "&7Vende tudo desta pagina."
+gui-withdraw-all-name: "&e&lRETIRAR TUDO"
+gui-withdraw-all-lore:
+  - "&7Retira tudo desta pagina para o seu inventario."
+  - "&7O que nao couber fica no deposito."
+withdraw-page-success: "&aTodos os itens foram retirados."
+withdraw-page-partial: "&eRetirado o que coube, o resto ficou no deposito."
+gui-material-lore:
+  - "&7Quantidade: &f%amount%"
+  - "&7Preco unitario: &f%price%"
+  - "&7Valor total: &a%total%"
+  - ""
+  - "&eClique esquerdo: &7Vender"
+  - "&eShift + Clique esquerdo: &7Retirar para o inventario"
+gui-nav-prev: "&f<< Pagina Anterior"
+gui-nav-next: "&fProxima Pagina >>"
+gui-page-indicator: "&fPagina %page%/%max%"
