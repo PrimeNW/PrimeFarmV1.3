@@ -30,9 +30,9 @@ istendiginde satis yapilabilen bir eklenti.
 
 - `primefarm.use` (varsayilan: herkes) - komutlari kullanma
 - `primefarm.admin` (varsayilan: op) - arsa limitinden muafiyet
-`primefarm.page3` 3. sayfaya erişmesini sağlar.
-`primefarm.page4` 4. sayfaya erişmesini sağlar.
-`primefarm.page5` 5. sayfaya erişmesini sağlar.
+- `primefarm.page3` 3. sayfaya erişmesini sağlar.
+- `primefarm.page4` 4. sayfaya erişmesini sağlar.
+- `primefarm.page5` 5. sayfaya erişmesini sağlar.
 
 ## Ayarlar (config.yml)
 
