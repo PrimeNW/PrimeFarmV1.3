@@ -1,0 +1,36 @@
+name: Build PrimeFarm
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Kodu indir
+        uses: actions/checkout@v4
+
+      - name: JDK 8 kur
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '8'
+          cache: maven
+
+      - name: Spigot 1.8.8 API'sini yerel Maven deposuna derle (BuildTools)
+        run: |
+          mkdir -p buildtools && cd buildtools
+          curl -sSL -o BuildTools.jar https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar
+          java -jar BuildTools.jar --rev 1.8.8 --compile spigot
+
+      - name: Maven ile projeyi derle
+        run: mvn -B clean package
+
+      - name: Jar dosyasini artifact olarak yukle
+        uses: actions/upload-artifact@v4
+        with:
+          name: PrimeFarm-jar
+          path: target/PrimeFarm.jar
