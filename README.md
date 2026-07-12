@@ -6,7 +6,7 @@ istendiginde satis yapilabilen bir eklenti.
 
 ## Nasil calisir?
 
-1. Oyuncu `/pf stora` ile deposuna erişebilir.
+1. Oyuncu `/pf storage` ile deposuna erişebilir.
 2. Depoyu kullanmak için oyun içi parayla ödeme yapar.
 3. `/pf settings` ile depolayacağı farm itemini kapatıp, açabilir.
 4. O arsa icinde kirilan/dusen KAKTUS ve SEKER KAMISI itemleri (piston, elle
