@@ -6,15 +6,14 @@ istendiginde satis yapilabilen bir eklenti.
 
 ## Nasil calisir?
 
-1. Oyuncu `/pf wand` ile bir secim cubugu alir.
-2. Sol tik ile 1. nokta, sag tik ile 2. nokta secilir (arsanin iki kosesi).
-3. `/pf create <isim>` ile bu alan arsa olarak kaydedilir.
+1. Oyuncu `/pf stora` ile deposuna erişebilir.
+2. Depoyu kullanmak için oyun içi parayla ödeme yapar.
+3. `/pf settings` ile depolayacağı farm itemini kapatıp, açabilir.
 4. O arsa icinde kirilan/dusen KAKTUS ve SEKER KAMISI itemleri (piston, elle
    kirma, fizik nedeniyle dusme - hangi yontemle olursa olsun) dunyaya hic
    dusmeden dogrudan arsa sahibinin deposuna eklenir. Item lag'i olmaz,
    hopper/chest zinciri kurmaya gerek kalmaz.
-5. `/pf storage` ile depo GUI'si acilir, urun bazinda ya da "TUMUNU SAT"
-   ile toplu satis yapilabilir.
+5. `/pf lang` ile pluginin dilini ayarlayabilir, default dil seçeneği EN olarak ayarlıdır.
 6. Vault + bir ekonomi eklentisi (EssentialsX Economy vb.) yuklu ise satislar
    oraya, degilse dahili basit bir bakiye sistemine (`balances.yml`) islenir.
 
@@ -22,47 +21,21 @@ istendiginde satis yapilabilen bir eklenti.
 
 | Komut | Aciklama |
 |---|---|
-| `/pf wand` | Arsa secim cubugu verir |
-| `/pf create <isim>` | Secili alani arsa olarak kaydeder |
-| `/pf remove <isim>` | Arsayi siler |
-| `/pf list` | Kendi arsalarini listeler |
-| `/pf storage` | Depo/satis GUI'sini acar |
+| `/pf storage` | Arsa secim cubugu verir |
+| `/pf lang` | Secili alani arsa olarak kaydeder |
+| `/pf settings` | Arsayi siler |
+| `/pf reload` | Kendi arsalarini listeler |
 
 ## Izinler
 
 - `primefarm.use` (varsayilan: herkes) - komutlari kullanma
 - `primefarm.admin` (varsayilan: op) - arsa limitinden muafiyet
+`primefarm.page3` 3. sayfaya erişmesini sağlar.
+`primefarm.page4` 4. sayfaya erişmesini sağlar.
+`primefarm.page5` 5. sayfaya erişmesini sağlar.
 
 ## Ayarlar (config.yml)
 
 - `max-zones-per-player`: Oyuncu basina maksimum arsa sayisi
 - `prices`: Materyal basina satis fiyati
-- `tracked-materials`: Otomatik toplanacak materyal listesi (istersen
   `PUMPKIN`, `MELON_BLOCK` gibi baska materyaller de ekleyebilirsin)
-
-## Derleme
-
-Maven kurulu olmasi yeterli:
-
-```bash
-mvn clean package
-```
-
-Cikan jar dosyasi `target/PrimeFarm.jar` konumunda olusur, sunucunun
-`plugins/` klasorune atman yeterli.
-
-**Not:** `pom.xml` icindeki Spigot 1.8.8 API bagimliligi icin BuildTools ile
-yerel Maven repository'ne `spigot-1.8.8-R0.1-SNAPSHOT.jar` kurulu olmasi
-gerekebilir (Spigot resmi kaynaklarindan `BuildTools.jar` ile
-`java -jar BuildTools.jar --rev 1.8.8` calistirarak elde edilir).
-
-## Bilinen sinirlamalar / gelistirme fikirleri
-
-- Arsalar birbiriyle cakisabilir; ilk eslesen arsa esas alinir. Istersen
-  `ZoneManager#createZone` icine cakisma kontrolu ekleyebilirsin.
-- Su an sadece CACTUS ve SUGAR_CANE takip ediliyor, config'den kolayca
-  genisletilebilir (BEETROOT, WHEAT vb. icin BlockBreakEvent bazli ayri
-  bir mantik gerekebilir cunku onlar item olarak degil "azalan blok"
-  olarak calisir).
-- WorldGuard gibi bir bolge eklentisiyle entegrasyon istersen, ZoneManager
-  yerine WorldGuard region sorgusu kullanacak sekilde kolayca degistirilebilir.
